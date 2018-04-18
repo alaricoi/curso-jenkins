@@ -10,7 +10,7 @@ pipeline {
     stage('test unittario') {
       steps {
         echo 'lanzando test unitarios'
-        sh 'ccd core mvn test'
+        sh 'cd core mvn test'
       }
     }
     stage('Empaquetado') {
