@@ -4,13 +4,13 @@ pipeline {
     stage('clean') {
       steps {
         echo 'limpiando codigo'
-        sh 'cd core mvn clean'
+        sh 'core/mvn clean'
       }
     }
     stage('test unittario') {
       steps {
         echo 'lanzando test unitarios'
-        sh 'cd core  mvn test'
+        sh 'core/mvn test'
       }
     }
     stage('Empaquetado') {
@@ -18,7 +18,7 @@ pipeline {
         stage('Empaquetado') {
           steps {
             echo 'Generacion de war'
-            sh 'cd core mvn package'
+            sh 'core/mvn package'
           }
         }
         stage('Lanzo Sonar') {
