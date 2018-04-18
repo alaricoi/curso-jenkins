@@ -10,7 +10,7 @@ pipeline {
     stage('test unittario') {
       steps {
         echo 'lanzando test unitarios'
-        sh 'cd raiz  mvn test'
+        sh 'cd core  mvn test'
       }
     }
     stage('Empaquetado') {
@@ -18,13 +18,13 @@ pipeline {
         stage('Empaquetado') {
           steps {
             echo 'Generacion de war'
-            sh 'mvn package'
+            sh 'cd core mvn package'
           }
         }
         stage('Lanzo Sonar') {
           steps {
             echo 'LAnzando sonar'
-            sh 'cd raiz mvn sonar:sonar'
+            sh 'cd core mvn sonar:sonar'
           }
         }
       }
@@ -37,7 +37,7 @@ pipeline {
     stage('') {
       steps {
         echo 'Instalar'
-        sh 'cd raiz mvn install'
+        sh 'cd core mvn install'
       }
     }
   }
