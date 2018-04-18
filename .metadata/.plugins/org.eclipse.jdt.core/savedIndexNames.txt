@@ -1,0 +1,5 @@
+INDEX VERSION 1.130+/home/vagrant/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+159370756.index
+3480884635.index
+865960247.index
+777633144.index
