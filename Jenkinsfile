@@ -4,7 +4,7 @@ pipeline {
     stage('clean') {
       steps {
         echo 'limpiando codigo'
-        sh 'cd raiz mvn clean'
+        sh 'cd core mvn clean'
       }
     }
     stage('test unittario') {
