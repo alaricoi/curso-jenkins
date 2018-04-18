@@ -24,7 +24,9 @@ pipeline {
         stage('Lanzo Sonar') {
           steps {
             echo 'LAnzando sonar'
-            sh 'cd core mvn sonar:sonar'
+            //sh 'cd core mvn sonar:sonar'
+             withSonarQubeEnv('sonar scanner 3.1.0') {
+                sh "${scannerHome}/bin/sonar-scanner"
           }
         }
       }
