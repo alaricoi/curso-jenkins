@@ -24,11 +24,12 @@ pipeline {
         stage('Lanzo Sonar') {
           steps {
             echo 'LAnzando sonar'
-            echo ${scannerHome}
+         
             //sh 'cd core mvn sonar:sonar'
              withSonarQubeEnv('scanner) {
-                sh "/home/vagrant/.jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonar_scanenr_3.1.0/bin/sonar-scanner"
+                  echo ${scannerHome}
             }   
+        sh "/home/vagrant/.jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonar_scanenr_3.1.0/bin/sonar-scanner"
           }
         }
       }
