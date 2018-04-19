@@ -27,7 +27,7 @@ pipeline {
          
             //sh 'cd core mvn sonar:sonar'
              //withSonarQubeEnv('scanner) {
-                  echo ${scannerHome}
+             //     echo ${scannerHome}
            // }   
         sh "/home/vagrant/.jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonar_scanenr_3.1.0/bin/sonar-scanner"
           }
