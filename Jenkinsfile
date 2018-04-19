@@ -26,11 +26,11 @@ pipeline {
             echo 'LAnzando sonar'
          
             //sh 'cd core mvn sonar:sonar'
-             //withSonarQubeEnv('scanner) {
+             withSonarQubeEnv('scanner) {
              //     echo ${scannerHome}
-           // }   
+              
         sh "/home/vagrant/.jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonar_scanenr_3.1.0/bin/sonar-scanner -Dsonar.projectName=curso_j-nkins -Dsonar.projectVersion=1 -Dsonar.projectKey=curso-jenkins -Dsonar.sources=. -Dsonar.java.binaries=core/target/classes"
-//        }
+       }
 
           }
         }
